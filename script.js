@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // 假设你提前把所有表情包文件名放入数组
     // 如果是静态网页，无法自动读取文件夹，需要手动列出
     const allStamps = [
-      "001.png",
-      "002.jpg",
+        "001.png",
+        "002.jpg",
         "003.jpg",
         "004.png",
         "005.jpg"

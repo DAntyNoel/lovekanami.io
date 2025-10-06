@@ -1,25 +1,26 @@
-.overlay {
+.hero {
     position: relative;
     padding: 2rem 3rem;
-    border-radius: 16px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
-    text-align: center;
-    animation: fadeIn 1s ease;
 }
 
-.container {
-    text-align: center;
+.welcome {
     background: rgba(255, 255, 255, 0.8);
     padding: 60px 80px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    max-width: 600px;
-    text-align: center;
-    animation: fadeIn 1s ease-in;
 }
 
+.section {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    padding: 30px 20px;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in;
+    text-align: center;
+}
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
