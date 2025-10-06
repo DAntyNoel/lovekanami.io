@@ -3,18 +3,23 @@ const images = [
     "res/images/backgrounds/Soda.png",
 ];
   
-let index = 0;
-const bg = document.querySelector('.background');
-
-function changeBackground() {
-bg.style.opacity = 0;
-setTimeout(() => {
-    bg.style.backgroundImage = `url(${images[index]})`;
+document.addEventListener("DOMContentLoaded", () => {
+    let index = 0;
+    const bg = document.querySelector(".background");
+  
+    // 初始化背景
+    bg.style.backgroundImage = `url(${images[0]})`;
     bg.style.opacity = 1;
-    index = (index + 1) % images.length;
-}, 1000);
-}
-
-// 初始设置
-bg.style.backgroundImage = `url(${images[0]})`;
-setInterval(changeBackground, 5000); // 每 5 秒切换一次
+  
+    function changeBackground() {
+      bg.style.opacity = 0; // 淡出当前
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        bg.style.backgroundImage = `url(${images[index]})`;
+        bg.style.opacity = 1; // 淡入新背景
+      }, 1000); // 与 CSS transition 的时间保持一致
+    }
+  
+    setInterval(changeBackground, 30000); // 每 30 秒切换一次
+  });
+  
